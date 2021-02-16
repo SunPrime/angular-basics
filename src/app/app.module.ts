@@ -1,19 +1,28 @@
-import {NgModule, Provider} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { AboutExtraComponent } from './about-extra/about-extra.component';
+import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
+import { PostsComponent } from './posts/posts.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    AboutExtraComponent,
+    HomeComponent,
+    PostComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

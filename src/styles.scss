@@ -100,6 +100,11 @@ img {
   }
 }
 
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
 input,
 select,
 textarea {
@@ -108,9 +113,38 @@ textarea {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
-  margin: 1.2rem 0;
+  margin: 1rem;
 }
 
 hr {
   margin: 0.5rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .7rem 2rem;
+  z-index: 1;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 1rem;
+  background: #dc3545;
+  color: #ffffff;
+
+  ul {
+    display: flex;
+
+    li.active a {
+      font-weight: bold;
+      color: #333333;
+      cursor: default;
+    }
+  }
+
+  a {
+    color: #ffffff;
+    padding: .45rem;
+    margin: 0 .25rem;
+  }
 }
