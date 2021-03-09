@@ -11,13 +11,13 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
-  color: #333333;
+  color: #333;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 a {
@@ -38,7 +38,7 @@ img {
 
 .btn {
   display: inline-block;
-  background-color: #333333;
+  background: #333333;
   color: #fff;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
@@ -57,11 +57,6 @@ img {
 
 .btn:hover {
   opacity: 0.8;
-}
-
-.btn.btn-danger {
-  background: #dc3545;
-  color: #ffffff;
 }
 
 .form-control {
@@ -89,15 +84,6 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
-
-  p {
-    display: flex;
-    justify-content: space-between;
-
-    span.completed {
-      text-decoration: line-through;
-    }
-  }
 }
 
 input,
@@ -108,37 +94,9 @@ textarea {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
-  margin: 1.2rem 0;
+  margin-bottom: 1rem;
 }
 
 hr {
-  margin: 0.5rem 0;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  z-index: 1;
-  width: 100%;
-  opacity: 0.9;
-  margin-bottom: 1rem;
-  background: #dc3545;
-  color: #fff;
-
-  ul {
-    display: flex;
-
-    li.active a {
-      font-weight: bold;
-      color: #333333;
-      cursor: default;
-    }
-  }
-
-  a {
-    color: #fff;
-    padding: 0.45rem;
-    margin: 0 0.25rem;
-  }
+  margin: .5rem 0;
 }
