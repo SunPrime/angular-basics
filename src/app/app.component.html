@@ -1,4 +1,19 @@
 <div class="container">
-  <h1>Angular basic</h1>
+  <h1>Angular Animation</h1>
+  <button class="btn" (click)="animate()">Animate</button>
+  <button class="btn" (click)="boxState = 'special'">Set Special State</button>
+  <button class="btn" (click)="visible = !visible">Visible</button>
 
+  <hr />
+  <div class="wrap">
+    <div
+      class="box"
+      [@box]="boxState"
+      *ngIf="visible"
+      (@box.start)="animationStarted($event)"
+      (@box.done)="animationDone($event)"
+    >
+      <h4>{{ boxState | uppercase }}</h4>
+    </div>
+  </div>
 </div>
