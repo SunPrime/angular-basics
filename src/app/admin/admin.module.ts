@@ -6,14 +6,21 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import {AuthService} from './shared/services/auth.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
 import {AuthGuard} from './shared/services/auth.guard';
 import {QuillModule} from 'ngx-quill';
+import {SearchPipe} from './shared/search.pipe';
 
 @NgModule({
-  declarations: [AdminLayoutComponent, LoginPageComponent, DashboardPageComponent, CreatePageComponent, EditPageComponent],
+  declarations: [
+    AdminLayoutComponent,
+    LoginPageComponent,
+    DashboardPageComponent,
+    CreatePageComponent,
+    EditPageComponent,
+    SearchPipe
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild([
@@ -29,10 +36,11 @@ import {QuillModule} from 'ngx-quill';
     ]),
     ReactiveFormsModule,
     SharedModule,
-    QuillModule
+    QuillModule,
+    FormsModule
   ],
   exports: [RouterModule],
-  providers: [AuthService, AuthGuard]
+  providers: [AuthGuard]
 })
 export class AdminModule {
 
